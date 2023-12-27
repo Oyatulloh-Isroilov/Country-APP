@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style link -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font awesome cdnJs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,800&display=swap"
+        rel="stylesheet">
+
+
+    <title>Country App</title>
+</head>
+
+<body>
+    <div class="container topContainer">
+        <h1>Where in the world?</h1>
+        <button class="toggleBtn"><i class="far fa-moon moon"></i>Dark Mode</button>
+    </div>
+
+    <div class="container mainContainer">
+        <div class="controlForm">
+            <input type="text" name="searchInp" id="searchInp" placeholder="Search for a country…">
+            <i class="fas fa-search searchBtn"></i>
+        </div>
+
+        <div class="countryDropdownBar">
+            <div class="countryDropdown">
+                <p>Filter by Region</p>
+                <button><i class="fas fa-chevron-down down"></i></button>
+            </div>
+            <div class="dropMenu showDropdown">
+                <p class="countryRegion">All</p>
+                <p class="countryRegion">Africa</p>
+                <p class="countryRegion">America</p>
+                <p class="countryRegion">Asia</p>
+                <p class="countryRegion">Europe</p>
+                <p class="countryRegion">Oceania</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contriesContainer"></div>
+
+    <div class="openedCountry show">
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
