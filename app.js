@@ -40,8 +40,8 @@ function showCountrys(data) {
   countriesEl.appendChild(country);
   country.addEventListener("click", () => {
     showCountrysDetails(data);
-});
-console.log(data);
+  });
+  console.log(data);
 }
 
 // searchBtn
@@ -122,3 +122,19 @@ function showCountrysDetails(data) {
     openedCountry.classList.toggle("show");
   });
 }
+
+searchInp.addEventListener("input", () => {
+  const searchValue = searchInp.value.toLowerCase();
+  const countryBlocks = document.querySelectorAll(".country");
+
+  countryBlocks.forEach((block) => {
+    const countryName = block
+      .querySelector(".countryName")
+      .innerText.toLowerCase();
+    if (countryName.includes(searchValue)) {
+      block.style.display = "grid";
+    } else {
+      block.style.display = "none";
+    }
+  });
+});
